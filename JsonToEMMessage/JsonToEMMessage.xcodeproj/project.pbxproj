@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7131BF471EE576A7006B38BC /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7131BF461EE576A7006B38BC /* ListViewController.m */; };
+		7131BF4A1EE5783D006B38BC /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7131BF491EE5783D006B38BC /* ChatViewController.m */; };
+		7184224F1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7184224E1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m */; };
+		7189476A1EE6997B00707E4C /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 718947691EE6997B00707E4C /* DBUtil.m */; };
+		7189476C1EE69DED00707E4C /* DB.png in Resources */ = {isa = PBXBuildFile; fileRef = 7189476B1EE69DED00707E4C /* DB.png */; };
+		718A027F1EF7FC4C00B6297B /* record_file in Resources */ = {isa = PBXBuildFile; fileRef = 718A027E1EF7FC4C00B6297B /* record_file */; };
+		71B93B5B1EDB9FA900F901AC /* BodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B93B5A1EDB9FA900F901AC /* BodyModel.m */; };
+		71B93B5E1EDB9FBA00F901AC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B93B5D1EDB9FBA00F901AC /* BaseModel.m */; };
+		71B93B611EDB9FFB00F901AC /* PayloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B93B601EDB9FFB00F901AC /* PayloadModel.m */; };
+		71BAD2161EE18BD9001D8B6B /* JTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BAD2151EE18BD9001D8B6B /* JTManager.m */; };
+		71D44BE41EF00E61001EEFA3 /* EMMessage+JTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D44BE31EF00E61001EEFA3 /* EMMessage+JTMessage.m */; };
+		71FD3BCB1ED702A9000190FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FD3BCA1ED702A9000190FF /* main.m */; };
+		71FD3BCE1ED702A9000190FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FD3BCD1ED702A9000190FF /* AppDelegate.m */; };
+		71FD3BD11ED702A9000190FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FD3BD01ED702A9000190FF /* ViewController.m */; };
+		71FD3BD41ED702A9000190FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FD3BD21ED702A9000190FF /* Main.storyboard */; };
+		71FD3BD61ED702A9000190FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71FD3BD51ED702A9000190FF /* Assets.xcassets */; };
+		71FD3BD91ED702A9000190FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FD3BD71ED702A9000190FF /* LaunchScreen.storyboard */; };
+		71FD3BE91ED70511000190FF /* RecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FD3BE81ED70511000190FF /* RecordModel.m */; };
+		CC65ECC795A59A2EC574C8B6 /* libPods-JsonToEMMessage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D516D3499EEF533F3E2076 /* libPods-JsonToEMMessage.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17D516D3499EEF533F3E2076 /* libPods-JsonToEMMessage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JsonToEMMessage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		711BCBDB1EE522A5001F0077 /* JTheader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTheader.h; sourceTree = "<group>"; };
+		7131BF451EE576A7006B38BC /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		7131BF461EE576A7006B38BC /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		7131BF481EE5783D006B38BC /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		7131BF491EE5783D006B38BC /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		7184224D1EF1578C00FDBAAC /* EMMessageBody+JTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMMessageBody+JTMessage.h"; sourceTree = "<group>"; };
+		7184224E1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMMessageBody+JTMessage.m"; sourceTree = "<group>"; };
+		718947681EE6997B00707E4C /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
+		718947691EE6997B00707E4C /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
+		7189476B1EE69DED00707E4C /* DB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DB.png; sourceTree = "<group>"; };
+		718A027E1EF7FC4C00B6297B /* record_file */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = record_file; sourceTree = "<group>"; };
+		71B93B591EDB9FA900F901AC /* BodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyModel.h; sourceTree = "<group>"; };
+		71B93B5A1EDB9FA900F901AC /* BodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyModel.m; sourceTree = "<group>"; };
+		71B93B5C1EDB9FBA00F901AC /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		71B93B5D1EDB9FBA00F901AC /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		71B93B5F1EDB9FFB00F901AC /* PayloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayloadModel.h; sourceTree = "<group>"; };
+		71B93B601EDB9FFB00F901AC /* PayloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayloadModel.m; sourceTree = "<group>"; };
+		71BAD2141EE18BD9001D8B6B /* JTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTManager.h; sourceTree = "<group>"; };
+		71BAD2151EE18BD9001D8B6B /* JTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTManager.m; sourceTree = "<group>"; };
+		71D44BE21EF00E61001EEFA3 /* EMMessage+JTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMMessage+JTMessage.h"; sourceTree = "<group>"; };
+		71D44BE31EF00E61001EEFA3 /* EMMessage+JTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMMessage+JTMessage.m"; sourceTree = "<group>"; };
+		71FD3BC61ED702A9000190FF /* JsonToEMMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonToEMMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71FD3BCA1ED702A9000190FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71FD3BCC1ED702A9000190FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		71FD3BCD1ED702A9000190FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		71FD3BCF1ED702A9000190FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		71FD3BD01ED702A9000190FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		71FD3BD31ED702A9000190FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71FD3BD51ED702A9000190FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71FD3BD81ED702A9000190FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71FD3BDA1ED702A9000190FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71FD3BE71ED70511000190FF /* RecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordModel.h; sourceTree = "<group>"; };
+		71FD3BE81ED70511000190FF /* RecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordModel.m; sourceTree = "<group>"; };
+		B7618A11E3678CA04BD5CE33 /* Pods-JsonToEMMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonToEMMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JsonToEMMessage/Pods-JsonToEMMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB5A55040F32CD1EBCAD50D /* Pods-JsonToEMMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonToEMMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-JsonToEMMessage/Pods-JsonToEMMessage.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71FD3BC31ED702A9000190FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC65ECC795A59A2EC574C8B6 /* libPods-JsonToEMMessage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71D44BE11EF00E08001EEFA3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				71D44BE21EF00E61001EEFA3 /* EMMessage+JTMessage.h */,
+				71D44BE31EF00E61001EEFA3 /* EMMessage+JTMessage.m */,
+				7184224D1EF1578C00FDBAAC /* EMMessageBody+JTMessage.h */,
+				7184224E1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		71FD3BBD1ED702A9000190FF = {
+			isa = PBXGroup;
+			children = (
+				71FD3BC81ED702A9000190FF /* JsonToEMMessage */,
+				71FD3BC71ED702A9000190FF /* Products */,
+				CC03295381D73D046FDF13B3 /* Pods */,
+				FCB796957932A860AACA5664 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		71FD3BC71ED702A9000190FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71FD3BC61ED702A9000190FF /* JsonToEMMessage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71FD3BC81ED702A9000190FF /* JsonToEMMessage */ = {
+			isa = PBXGroup;
+			children = (
+				71FD3BCC1ED702A9000190FF /* AppDelegate.h */,
+				71FD3BCD1ED702A9000190FF /* AppDelegate.m */,
+				71FD3BCF1ED702A9000190FF /* ViewController.h */,
+				71FD3BD01ED702A9000190FF /* ViewController.m */,
+				7131BF451EE576A7006B38BC /* ListViewController.h */,
+				7131BF461EE576A7006B38BC /* ListViewController.m */,
+				7131BF481EE5783D006B38BC /* ChatViewController.h */,
+				7131BF491EE5783D006B38BC /* ChatViewController.m */,
+				718947681EE6997B00707E4C /* DBUtil.h */,
+				718947691EE6997B00707E4C /* DBUtil.m */,
+				718A027E1EF7FC4C00B6297B /* record_file */,
+				7189476B1EE69DED00707E4C /* DB.png */,
+				71FD3BE41ED704F6000190FF /* JTMessage */,
+				71FD3BD21ED702A9000190FF /* Main.storyboard */,
+				71FD3BD51ED702A9000190FF /* Assets.xcassets */,
+				71FD3BD71ED702A9000190FF /* LaunchScreen.storyboard */,
+				71FD3BDA1ED702A9000190FF /* Info.plist */,
+				71FD3BC91ED702A9000190FF /* Supporting Files */,
+			);
+			path = JsonToEMMessage;
+			sourceTree = "<group>";
+		};
+		71FD3BC91ED702A9000190FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71FD3BCA1ED702A9000190FF /* main.m */,
+				711BCBDB1EE522A5001F0077 /* JTheader.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71FD3BE41ED704F6000190FF /* JTMessage */ = {
+			isa = PBXGroup;
+			children = (
+				71D44BE11EF00E08001EEFA3 /* Category */,
+				71FD3BE51ED704F6000190FF /* Manager */,
+				71FD3BE61ED704F6000190FF /* Model */,
+			);
+			path = JTMessage;
+			sourceTree = "<group>";
+		};
+		71FD3BE51ED704F6000190FF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				71BAD2141EE18BD9001D8B6B /* JTManager.h */,
+				71BAD2151EE18BD9001D8B6B /* JTManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		71FD3BE61ED704F6000190FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71FD3BE71ED70511000190FF /* RecordModel.h */,
+				71FD3BE81ED70511000190FF /* RecordModel.m */,
+				71B93B5F1EDB9FFB00F901AC /* PayloadModel.h */,
+				71B93B601EDB9FFB00F901AC /* PayloadModel.m */,
+				71B93B591EDB9FA900F901AC /* BodyModel.h */,
+				71B93B5A1EDB9FA900F901AC /* BodyModel.m */,
+				71B93B5C1EDB9FBA00F901AC /* BaseModel.h */,
+				71B93B5D1EDB9FBA00F901AC /* BaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC03295381D73D046FDF13B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7618A11E3678CA04BD5CE33 /* Pods-JsonToEMMessage.debug.xcconfig */,
+				FCB5A55040F32CD1EBCAD50D /* Pods-JsonToEMMessage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCB796957932A860AACA5664 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17D516D3499EEF533F3E2076 /* libPods-JsonToEMMessage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71FD3BC51ED702A9000190FF /* JsonToEMMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71FD3BDD1ED702A9000190FF /* Build configuration list for PBXNativeTarget "JsonToEMMessage" */;
+			buildPhases = (
+				C99326A8B4142E76A0852ADB /* [CP] Check Pods Manifest.lock */,
+				71FD3BC21ED702A9000190FF /* Sources */,
+				71FD3BC31ED702A9000190FF /* Frameworks */,
+				71FD3BC41ED702A9000190FF /* Resources */,
+				CCDE92B9381D6F7B2119D936 /* [CP] Embed Pods Frameworks */,
+				51210DBF26413A323DC9F2F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JsonToEMMessage;
+			productName = JsonToEMMessage;
+			productReference = 71FD3BC61ED702A9000190FF /* JsonToEMMessage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71FD3BBE1ED702A9000190FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = WYZ;
+				TargetAttributes = {
+					71FD3BC51ED702A9000190FF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4K2TMW2TPL;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 71FD3BC11ED702A9000190FF /* Build configuration list for PBXProject "JsonToEMMessage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71FD3BBD1ED702A9000190FF;
+			productRefGroup = 71FD3BC71ED702A9000190FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71FD3BC51ED702A9000190FF /* JsonToEMMessage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71FD3BC41ED702A9000190FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7189476C1EE69DED00707E4C /* DB.png in Resources */,
+				71FD3BD91ED702A9000190FF /* LaunchScreen.storyboard in Resources */,
+				718A027F1EF7FC4C00B6297B /* record_file in Resources */,
+				71FD3BD61ED702A9000190FF /* Assets.xcassets in Resources */,
+				71FD3BD41ED702A9000190FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51210DBF26413A323DC9F2F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JsonToEMMessage/Pods-JsonToEMMessage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C99326A8B4142E76A0852ADB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDE92B9381D6F7B2119D936 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JsonToEMMessage/Pods-JsonToEMMessage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71FD3BC21ED702A9000190FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B93B611EDB9FFB00F901AC /* PayloadModel.m in Sources */,
+				71B93B5E1EDB9FBA00F901AC /* BaseModel.m in Sources */,
+				7131BF4A1EE5783D006B38BC /* ChatViewController.m in Sources */,
+				7131BF471EE576A7006B38BC /* ListViewController.m in Sources */,
+				7184224F1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m in Sources */,
+				71FD3BE91ED70511000190FF /* RecordModel.m in Sources */,
+				71D44BE41EF00E61001EEFA3 /* EMMessage+JTMessage.m in Sources */,
+				71FD3BD11ED702A9000190FF /* ViewController.m in Sources */,
+				71B93B5B1EDB9FA900F901AC /* BodyModel.m in Sources */,
+				7189476A1EE6997B00707E4C /* DBUtil.m in Sources */,
+				71FD3BCE1ED702A9000190FF /* AppDelegate.m in Sources */,
+				71FD3BCB1ED702A9000190FF /* main.m in Sources */,
+				71BAD2161EE18BD9001D8B6B /* JTManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		71FD3BD21ED702A9000190FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71FD3BD31ED702A9000190FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71FD3BD71ED702A9000190FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71FD3BD81ED702A9000190FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71FD3BDB1ED702A9000190FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71FD3BDC1ED702A9000190FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71FD3BDE1ED702A9000190FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7618A11E3678CA04BD5CE33 /* Pods-JsonToEMMessage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4K2TMW2TPL;
+				GCC_PREFIX_HEADER = JsonToEMMessage/JTheader.h;
+				INFOPLIST_FILE = JsonToEMMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuzhang.UsePrivate.JsonToEMMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71FD3BDF1ED702A9000190FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCB5A55040F32CD1EBCAD50D /* Pods-JsonToEMMessage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4K2TMW2TPL;
+				GCC_PREFIX_HEADER = JsonToEMMessage/JTheader.h;
+				INFOPLIST_FILE = JsonToEMMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuzhang.UsePrivate.JsonToEMMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71FD3BC11ED702A9000190FF /* Build configuration list for PBXProject "JsonToEMMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71FD3BDB1ED702A9000190FF /* Debug */,
+				71FD3BDC1ED702A9000190FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71FD3BDD1ED702A9000190FF /* Build configuration list for PBXNativeTarget "JsonToEMMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71FD3BDE1ED702A9000190FF /* Debug */,
+				71FD3BDF1ED702A9000190FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71FD3BBE1ED702A9000190FF /* Project object */;
+}
