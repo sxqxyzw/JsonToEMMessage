@@ -1,9 +1,9 @@
 platform :ios, '8.0'
 target 'JsonToEMMessage' do
 
-pod 'HyphenateLite'
+pod 'Hyphenate'
 
-pod 'EaseUILite', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
+pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 
 pod 'FMDB'
 

@@ -19,11 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSString *str = @"{\"msg_id\":\"319663521891616756\",\"timestamp\":\"1491992263569\",\"direction\":\"outgoing\",\"to\":\"user2\",\"from\":\"admin@easemob.com\",\"chat_type\":\"chat\",\"payload\":{\"ext\":{},\"bodies\":[{\"msg\":\"haha\",\"type\":\"txt\"}],\"from\":\"user1\",\"to\":\"user2\"}}";
-    
-    RecordModel *model = [[RecordModel alloc] initWithJson:str];
-    NSLog(@"~~~%@",model);
-    
     EMOptions *options = [EMOptions optionsWithAppkey:@"sxqxwdong#mychatdemo"];
     options.enableConsoleLog = NO;
     
