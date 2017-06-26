@@ -10,7 +10,6 @@
 
 #import "RecordModel.h"
 #import "JTManager.h"
-#import "DBUtil.h"
 
 @interface ChatViewController ()<EaseMessageViewControllerDelegate>
 
@@ -23,8 +22,6 @@
     // Do any additional setup after loading the view.
     self.showRefreshHeader = YES;
     self.delegate = self;
-    
-//    [self.chatBarMoreView insertItemWithImage:[UIImage imageNamed:@"DB.png"] highlightedImage:[UIImage imageNamed:@"DB.png"] title:@""];
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [backBtn setTitle:@"返回" forState:UIControlStateNormal];
@@ -89,16 +86,5 @@
 }
 
 
-#pragma mark - EaseMessageViewControllerDelegate
-- (void)messageViewController:(EaseMessageViewController *)viewController didSelectMoreView:(EaseChatBarMoreView *)moreView AtIndex:(NSInteger)index
-{
-    NSArray *array = [DBUtil selectImageMessages];
-    NSLog(@"发送的图片url：%@",array);
-    if (array.count > 0) {
-        NSDictionary *body = array.firstObject;
-        NSLog(@"url --- %@",body[@"url"]);
-    }
-    
-}
 
 @end
