@@ -16,6 +16,7 @@
 
 @interface EMMessageBody (JTMessage)
 
+//初始化消息体
 - (instancetype)initWithRecordModel:(RecordModel *)model;
 
 @end

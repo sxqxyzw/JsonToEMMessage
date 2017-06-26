@@ -16,6 +16,7 @@
 
 @interface EMMessage (JTMessage)
 
+//构造消息对象
 + (EMMessage *_Nullable)messageWithRecord:(RecordModel * _Nonnull)model;
 
 @end
