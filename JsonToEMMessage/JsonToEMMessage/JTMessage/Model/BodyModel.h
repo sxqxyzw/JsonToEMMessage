@@ -71,6 +71,8 @@ typedef NS_ENUM(NSInteger, BodyType) {
 
 @property (assign, nonatomic, readonly) float height;
 
+@property (strong, nonatomic) NSString *thumbnailDisplayName;
+
 @end
 
 @interface AudioBodyModel : FileBodyModel

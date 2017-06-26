@@ -118,7 +118,7 @@ Singleton_implementation
 - (BOOL)isNeedImport:(RecordModel *)model
         conversation:(EMConversation *)conversation
 {
-    if (conversation.type > EMConversationTypeChat)
+    if (conversation.type > EMConversationTypeChat && model.chatType > ChatType_chat)
     {
         if ([model.to isEqualToString:conversation.conversationId]) {
             return YES;

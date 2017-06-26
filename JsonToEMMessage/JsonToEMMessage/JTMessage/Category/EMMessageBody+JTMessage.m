@@ -107,7 +107,7 @@
     self.thumbnailRemotePath = _bodyModel.url;
     self.thumbnailSecretKey = _bodyModel.secret;
     self.thumbnailFileLength = _bodyModel.fileLength;
-    self.thumbnailDisplayName = [NSString stringWithFormat:@"thumb_%@",_bodyModel.filename];
+    self.thumbnailDisplayName = _bodyModel.thumbnailDisplayName;
     self.thumbnailSize = self.size;
     return self;
 }

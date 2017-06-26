@@ -12,11 +12,11 @@
 		7184224F1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7184224E1EF1578C00FDBAAC /* EMMessageBody+JTMessage.m */; };
 		7189476A1EE6997B00707E4C /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 718947691EE6997B00707E4C /* DBUtil.m */; };
 		7189476C1EE69DED00707E4C /* DB.png in Resources */ = {isa = PBXBuildFile; fileRef = 7189476B1EE69DED00707E4C /* DB.png */; };
-		718A027F1EF7FC4C00B6297B /* record_file in Resources */ = {isa = PBXBuildFile; fileRef = 718A027E1EF7FC4C00B6297B /* record_file */; };
 		71B93B5B1EDB9FA900F901AC /* BodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B93B5A1EDB9FA900F901AC /* BodyModel.m */; };
 		71B93B5E1EDB9FBA00F901AC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B93B5D1EDB9FBA00F901AC /* BaseModel.m */; };
 		71B93B611EDB9FFB00F901AC /* PayloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B93B601EDB9FFB00F901AC /* PayloadModel.m */; };
 		71BAD2161EE18BD9001D8B6B /* JTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BAD2151EE18BD9001D8B6B /* JTManager.m */; };
+		71CF0A081F012E0C0063A3BB /* record_file in Resources */ = {isa = PBXBuildFile; fileRef = 71CF0A071F012E0C0063A3BB /* record_file */; };
 		71D44BE41EF00E61001EEFA3 /* EMMessage+JTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D44BE31EF00E61001EEFA3 /* EMMessage+JTMessage.m */; };
 		71FD3BCB1ED702A9000190FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FD3BCA1ED702A9000190FF /* main.m */; };
 		71FD3BCE1ED702A9000190FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FD3BCD1ED702A9000190FF /* AppDelegate.m */; };
@@ -40,7 +40,6 @@
 		718947681EE6997B00707E4C /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
 		718947691EE6997B00707E4C /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
 		7189476B1EE69DED00707E4C /* DB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DB.png; sourceTree = "<group>"; };
-		718A027E1EF7FC4C00B6297B /* record_file */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = record_file; sourceTree = "<group>"; };
 		71B93B591EDB9FA900F901AC /* BodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyModel.h; sourceTree = "<group>"; };
 		71B93B5A1EDB9FA900F901AC /* BodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyModel.m; sourceTree = "<group>"; };
 		71B93B5C1EDB9FBA00F901AC /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		71B93B601EDB9FFB00F901AC /* PayloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayloadModel.m; sourceTree = "<group>"; };
 		71BAD2141EE18BD9001D8B6B /* JTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTManager.h; sourceTree = "<group>"; };
 		71BAD2151EE18BD9001D8B6B /* JTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTManager.m; sourceTree = "<group>"; };
+		71CF0A071F012E0C0063A3BB /* record_file */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = record_file; sourceTree = "<group>"; };
 		71D44BE21EF00E61001EEFA3 /* EMMessage+JTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMMessage+JTMessage.h"; sourceTree = "<group>"; };
 		71D44BE31EF00E61001EEFA3 /* EMMessage+JTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMMessage+JTMessage.m"; sourceTree = "<group>"; };
 		71FD3BC61ED702A9000190FF /* JsonToEMMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonToEMMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 				7131BF491EE5783D006B38BC /* ChatViewController.m */,
 				718947681EE6997B00707E4C /* DBUtil.h */,
 				718947691EE6997B00707E4C /* DBUtil.m */,
-				718A027E1EF7FC4C00B6297B /* record_file */,
+				71CF0A071F012E0C0063A3BB /* record_file */,
 				7189476B1EE69DED00707E4C /* DB.png */,
 				71FD3BE41ED704F6000190FF /* JTMessage */,
 				71FD3BD21ED702A9000190FF /* Main.storyboard */,
@@ -255,9 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71CF0A081F012E0C0063A3BB /* record_file in Resources */,
 				7189476C1EE69DED00707E4C /* DB.png in Resources */,
 				71FD3BD91ED702A9000190FF /* LaunchScreen.storyboard in Resources */,
-				718A027F1EF7FC4C00B6297B /* record_file in Resources */,
 				71FD3BD61ED702A9000190FF /* Assets.xcassets in Resources */,
 				71FD3BD41ED702A9000190FF /* Main.storyboard in Resources */,
 			);

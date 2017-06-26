@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    EMOptions *options = [EMOptions optionsWithAppkey:@"sxqxwdong#mychatdemo"];
+    EMOptions *options = [EMOptions optionsWithAppkey:@"easemob-demo#chatdemoui"];
     options.enableConsoleLog = NO;
     
     [[EMClient sharedClient] initializeSDKWithOptions:options];

@@ -23,7 +23,7 @@
         return nil;
     }
     BOOL isSend = [currentUsername isEqualToString:model.from] ? YES : NO;
-    NSString *conversationId = isSend ? model.to : model.from;
+    NSString *conversationId = (isSend || model.chatType > ChatType_chat) ? model.to : model.from;
     
     message = [[EMMessage alloc] initWithConversationID:conversationId from:model.from to:model.to body:body ext:model.ext];
     
