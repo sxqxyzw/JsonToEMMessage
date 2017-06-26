@@ -70,7 +70,26 @@
     [JTManager manager].downloadCompletionblock = ^(EMMessage *message, EMError *error) {
         if (!error) {
             NSLog(@"下载成功，更新UI");
-            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                __block NSInteger index = -1;
+                [weakSelf.dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    if ([obj conformsToProtocol:@protocol(IMessageModel)]) {
+                        EaseMessageModel *model = (EaseMessageModel *)obj;
+                        if ([model.messageId isEqualToString:message.messageId]) {
+                            index = idx;
+                            *stop = YES;
+                        }
+                    }
+                }];
+                if (index >= 0) {
+                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [weakSelf.tableView beginUpdates];
+                        [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                        [weakSelf.tableView endUpdates];
+                    });
+                }
+            });
         }
     };
     

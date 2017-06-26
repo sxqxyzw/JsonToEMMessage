@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _account.text = @"sx201";
+    _account.text = @"sx002";
     _password.text = @"1";
 }
 

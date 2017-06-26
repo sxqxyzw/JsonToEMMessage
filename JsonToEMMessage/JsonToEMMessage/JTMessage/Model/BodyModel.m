@@ -80,6 +80,8 @@
 
 @property (strong, nonatomic) NSDictionary *size;
 
+@property (strong, nonatomic) NSString *thumbFilename;
+
 @end
 
 @implementation ImgBodyModel
@@ -90,6 +92,13 @@
 
 - (float)height {
     return [_size[@"height"] floatValue];
+}
+
+- (NSString *)thumbnailDisplayName {
+    if (_thumbFilename.length <= 0) {
+        return [NSString stringWithFormat:@"thumb_%@", self.filename];
+    }
+    return _thumbFilename;
 }
 
 @end
