@@ -16,9 +16,14 @@
 #ifdef __OBJC__
 
 #import "EaseUI.h"
-#import <HyphenateLite/HyphenateLite.h>
 
-#define ISLITE_SDK  1
+//#define ISLITE_SDK  0
+//
+//#ifdef ISLITE_SDK
+//#import <HyphenateLite/HyphenateLite.h>
+//#else
+#import <Hyphenate/Hyphenate.h>
+//#endif
 
 
 #endif

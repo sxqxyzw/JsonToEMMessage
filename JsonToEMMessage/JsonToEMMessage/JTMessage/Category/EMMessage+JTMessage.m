@@ -14,13 +14,13 @@
 
 + (EMMessage *_Nullable)messageWithRecord:(RecordModel * _Nonnull)model {
     EMMessage *message = nil;
-    EMMessageBody *body = [[EMMessageBody alloc] initWithRecordModel:model];
-    if (!body) {
-        return nil;
-    }
     NSString *currentUsername = [EMClient sharedClient].currentUsername;
     if (currentUsername.length == 0) {
         return message;
+    }
+    EMMessageBody *body = [[EMMessageBody alloc] initWithRecordModel:model];
+    if (!body) {
+        return nil;
     }
     BOOL isSend = [currentUsername isEqualToString:model.from] ? YES : NO;
     NSString *conversationId = isSend ? model.to : model.from;

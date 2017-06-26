@@ -56,6 +56,42 @@ Singleton_implementation
 
 #pragma mark - Private
 
+- (void)downloadAttachment:(EMMessage *)message {
+    WEAKSELF
+    switch (message.body.type) {
+        case EMMessageBodyTypeVideo:
+        {
+            dispatch_async(weakSelf.downloadQueue, ^{
+                [[EMClient sharedClient].chatManager downloadMessageThumbnail:message progress:nil completion:^(EMMessage *aMessage, EMError *error) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        weakSelf.downloadCompletionblock(aMessage, error);
+                    });
+                }];
+            });
+        }
+            break;
+        case EMMessageBodyTypeVoice:
+        case EMMessageBodyTypeImage:
+        {
+            dispatch_async(weakSelf.downloadQueue, ^{
+                [[EMClient sharedClient].chatManager downloadMessageAttachment:message progress:nil completion:^(EMMessage *aMessage, EMError *error) {
+                    if (!error && aMessage.body.type == EMMessageBodyTypeImage) {
+                        EMImageMessageBody *body = (EMImageMessageBody *)aMessage.body;
+                        body.thumbnailDownloadStatus = body.downloadStatus;
+                        body.thumbnailLocalPath = body.localPath;
+                        [[EMClient sharedClient].chatManager updateMessage:aMessage completion:nil];
+                    }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        weakSelf.downloadCompletionblock(aMessage, error);
+                    });
+                }];
+            });
+        }
+            break;
+        default:
+            break;
+    }
+}
 
 #pragma mark - Public
 
@@ -109,10 +145,11 @@ Singleton_implementation
         return ;
     }
     __block EMConversation *conversation = nil;
-    __weak JTManager *weakManager = _instance;
+    WEAKSELF
     dispatch_async(_insertQueue, ^{
-        __strong JTManager *strongManager = weakManager;
+        __strong JTManager *strongManager = weakSelf;
         if (strongManager) {
+            __block NSMutableArray *insertFailMessages = [NSMutableArray array];
             [msgRecords enumerateObjectsUsingBlock:^(RecordModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 EMMessage *message = [EMMessage messageWithRecord:obj];
                 if (!conversation) {
@@ -120,37 +157,18 @@ Singleton_implementation
                                                                                    type:(EMConversationType)message.chatType
                                                                        createIfNotExist:YES];
                 }
-                [conversation insertMessage:message error:nil];
-                NSLog(@"--- %d", message.body.type);
-                switch (message.body.type) {
-                    case EMMessageBodyTypeVideo:
-                    {
-                        dispatch_async(strongManager.downloadQueue, ^{
-                            [[EMClient sharedClient].chatManager downloadMessageThumbnail:message progress:nil completion:^(EMMessage *message, EMError *error) {
-                                if (!error) {
-                                    NSLog(@"");
-                                }
-                            }];
-                        });
-                    }
-                        break;
-                    case EMMessageBodyTypeVoice:
-                    case EMMessageBodyTypeImage:
-                    {
-                        dispatch_async(strongManager.downloadQueue, ^{
-                            [[EMClient sharedClient].chatManager downloadMessageAttachment:message progress:nil completion:^(EMMessage *message, EMError *error) {
-                                if (!error) {
-                                    NSLog(@"");
-                                }
-                            }];
-                        });
-                    }
-                        break;
-                    default:
-                        break;
+                EMError *error = nil;
+                [conversation insertMessage:message error:&error];
+                if (!error) {
+                    [strongManager downloadAttachment:message];
+                }
+                else {
+                    [insertFailMessages addObject:message];
                 }
             }];
-            strongManager.block(nil, nil);
+            dispatch_async(dispatch_get_main_queue(), ^{
+               weakSelf.insertCompletionblock(insertFailMessages);
+            });
         }
     });
 }

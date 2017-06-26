@@ -12,8 +12,6 @@
 #import "JTManager.h"
 #import "DBUtil.h"
 
-#define WEAKSELF __weak typeof(self) weakSelf = self;
-
 @interface ChatViewController ()<EaseMessageViewControllerDelegate>
 
 @end
@@ -28,8 +26,27 @@
     
 //    [self.chatBarMoreView insertItemWithImage:[UIImage imageNamed:@"DB.png"] highlightedImage:[UIImage imageNamed:@"DB.png"] title:@""];
     
-    [self importServerMessages];
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     
+    
+    UIButton *insertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [insertBtn setTitle:@"插入" forState:UIControlStateNormal];
+    [insertBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [insertBtn addTarget:self action:@selector(insertMessage) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:insertBtn];
+    
+}
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)insertMessage {
+    [self importServerMessages];
 }
 
 - (void)importServerMessages {
@@ -50,7 +67,14 @@
         [[JTManager manager] insertMessageRecords:messages];
     });
     
-    [JTManager manager].block = ^(EMMessage *message, EMError *error) {
+    [JTManager manager].downloadCompletionblock = ^(EMMessage *message, EMError *error) {
+        if (!error) {
+            NSLog(@"下载成功，更新UI");
+            
+        }
+    };
+    
+    [JTManager manager].insertCompletionblock = ^(NSArray<EMMessage *> *failMessages) {
         [weakSelf.messsagesSource removeAllObjects];
         [weakSelf.dataArray removeAllObjects];
         [weakSelf tableViewDidTriggerHeaderRefresh];

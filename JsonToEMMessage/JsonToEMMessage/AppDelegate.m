@@ -15,7 +15,9 @@
 
 @implementation AppDelegate
 
-
+//19448840912897聊天室
+//sx002单聊
+//1471505141668群组
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     

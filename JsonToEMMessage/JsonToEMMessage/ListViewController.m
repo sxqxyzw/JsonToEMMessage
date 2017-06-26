@@ -29,17 +29,24 @@
 
 #pragma mark - Table view delegate
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     EMConversationType type = EMConversationTypeChat;
     NSString *chatter = @"sx410";
     if (indexPath.row == 1) {
         type = EMConversationTypeGroupChat;
-        chatter = @"1496100649501";
+        chatter = @"1483679778394";
+    }
+    else if (indexPath.row == 2) {
+        type = EMConversationTypeChatRoom;
+        chatter = @"16534960406530";
     }
     ChatViewController *chatVc = [[ChatViewController alloc] initWithConversationChatter:chatter conversationType:type];
     [self.navigationController pushViewController:chatVc animated:YES];
-    
     
 }
 

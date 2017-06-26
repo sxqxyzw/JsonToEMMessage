@@ -86,11 +86,11 @@
         <scene sceneID="JXo-86-Leb">
             <objects>
                 <navigationController storyboardIdentifier="nav" id="lrA-Bw-QQJ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xwi-jv-D7C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xwi-jv-D7C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
@@ -153,6 +153,28 @@
                                                 <constraint firstAttribute="trailing" secondItem="FSb-m8-gaU" secondAttribute="trailing" id="KbB-Fg-dNY"/>
                                                 <constraint firstItem="FSb-m8-gaU" firstAttribute="top" secondItem="NQk-WW-wVz" secondAttribute="top" id="Mu7-JX-OqK"/>
                                                 <constraint firstItem="FSb-m8-gaU" firstAttribute="leading" secondItem="NQk-WW-wVz" secondAttribute="leading" constant="20" id="rib-Eq-Kcc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="7tF-2w-xPW">
+                                        <rect key="frame" x="0.0" y="94" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7tF-2w-xPW" id="0Yn-rW-cVb">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聊天室聊天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCM-Os-jiL">
+                                                    <rect key="frame" x="20" y="0.0" width="322" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OCM-Os-jiL" firstAttribute="top" secondItem="0Yn-rW-cVb" secondAttribute="top" id="6pa-6k-qWI"/>
+                                                <constraint firstAttribute="trailing" secondItem="OCM-Os-jiL" secondAttribute="trailing" id="7JR-Tq-n0I"/>
+                                                <constraint firstItem="OCM-Os-jiL" firstAttribute="leading" secondItem="0Yn-rW-cVb" secondAttribute="leading" constant="20" id="a8p-G2-jLp"/>
+                                                <constraint firstAttribute="bottom" secondItem="OCM-Os-jiL" secondAttribute="bottom" id="oA8-z5-PC9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

@@ -10,7 +10,10 @@
 
 #define Singleton_interface + (instancetype)manager;
 
-typedef void(^JTCompletionBlock)(EMMessage *message, EMError *error);
+#define WEAKSELF __weak typeof(self) weakSelf = self;
+
+typedef void(^JTInSertCompletionBlock)(NSArray<EMMessage *>* failMessages);
+typedef void(^JTDownloadCompletionBlock)(EMMessage *message, EMError *error);
 
 #import "RecordModel.h"
 
@@ -18,7 +21,9 @@ typedef void(^JTCompletionBlock)(EMMessage *message, EMError *error);
 
 Singleton_interface
 
-@property (nonatomic, copy) JTCompletionBlock block;
+@property (nonatomic, copy) JTInSertCompletionBlock insertCompletionblock;
+
+@property (nonatomic, copy) JTDownloadCompletionBlock downloadCompletionblock;
 
 //正则分隔json格式字符串聊天记录，用于整个记录文件的
 - (NSArray *)regularExpression:(NSString *)jsonStr;

@@ -76,6 +76,19 @@
     self.remotePath = _bodyModel.url;
     self.secretKey = _bodyModel.secret;
     self.fileLength = _bodyModel.fileLength;
+    NSString *currentUsername = [EMClient sharedClient].currentUsername;
+    NSString *user = [currentUsername isEqualToString:model.from] ? model.to : model.from;
+    NSString *filename = (NSString *)[[self.remotePath componentsSeparatedByString:@"/"] lastObject];
+    NSString *directory = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/HyphenateSDK/appdata/%@/%@", currentUsername, user];
+    NSString *path = [directory stringByAppendingPathComponent:filename];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:path]) {
+        NSError *error = nil;
+        BOOL isExist = [fileManager createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:&error];
+        if (isExist && !error) {
+            self.localPath = path;
+        }
+    }
 }
 
 @end

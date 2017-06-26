@@ -6,11 +6,11 @@
 //  Copyright © 2017年 WYZ. All rights reserved.
 //
 
-#ifdef ISLITE_SDK
-#import <HyphenateLite/HyphenateLite.h>
-#else
+//#ifdef ISLITE_SDK
+//#import <HyphenateLite/HyphenateLite.h>
+//#else
 #import <Hyphenate/Hyphenate.h>
-#endif
+//#endif
 
 @class RecordModel;
 
