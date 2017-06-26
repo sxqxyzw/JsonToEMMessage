@@ -24,6 +24,7 @@
     self.delegate = self;
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 44, 44);
     [backBtn setTitle:@"返回" forState:UIControlStateNormal];
     [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
@@ -31,11 +32,13 @@
     
     
     UIButton *insertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    insertBtn.frame = CGRectMake(0, 0, 44, 44);
     [insertBtn setTitle:@"插入" forState:UIControlStateNormal];
     [insertBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [insertBtn addTarget:self action:@selector(insertMessage) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:insertBtn];
+    UIBarButtonItem *insertBar = [[UIBarButtonItem alloc] initWithCustomView:insertBtn];
     
+    [self.navigationItem setRightBarButtonItems:@[insertBar]];
 }
 
 - (void)back {
