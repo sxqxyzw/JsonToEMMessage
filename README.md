@@ -2,6 +2,11 @@
 
 `ChatViewController`类中点击导航栏右侧`插入`按钮，可以把Demo中`record_file`此文件的聊天记录加载出来，通过`EMConversation`验证，检索出对应的消息并插入。
 
+
+###运行demo
+
+运行前，需要先cd到`JsonToEMMessage`目录，执行`pod install`安装SDK和EaseUI
+
 ###导入目录
 
 添加到App项目中，只需要把`JTMessage`文件夹整个拖入项目
